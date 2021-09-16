@@ -26,27 +26,19 @@
         </div>
 
       </form>
-      <div class="site-category">
-        <ul>
-          <li v-for="(category ,index) in categoryItem" :key="index">
-            <CategoryItem :category="category" :categoryIndex="index" />
-          </li>
-        </ul>
-      </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
-import CategoryItem from './CategoryItem.vue'
 // import HomeSwiper from './HomeSwiper.vue'
 export default {
-  name: 'Site-header',
-  components: { CategoryItem },
+  name: 'SiteHeader',
   data () {
     return {
-      categoryItem: ["手机", "电视", "笔记本 平板", "家电", "出行 穿戴", "智能 路由器", "电源 配件", "健康 儿童", "耳机 音箱", "生活 箱包"],
+
       navMainList: ['小米手机', ' Redmi 红米', '电视', '笔记本', '平板', '家电', '路由器', '智能硬件', '服务', '社区'],
       headerSearch: ['冰箱', '洗衣机', '电视', '小米11', '耳机', '空调', '平板'],
       inputClickFlag: false,
@@ -156,21 +148,6 @@ export default {
         &:hover {
           background-color: #fafafa;
         }
-      }
-    }
-    .site-category {
-      position: absolute;
-      left: 0;
-      top: 100px;
-      width: 234px;
-      height: 460px;
-      background: rgba(105, 101, 101, 0.6);
-      z-index: 99;
-      li:first-of-type {
-        margin-top: 20px;
-      }
-      li:last-of-type {
-        margin-bottom: 20px;
       }
     }
   }

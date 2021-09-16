@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="header">
-      <div class="top-nav-wrapper">
+      <div class="top-nav-wrapper ">
 
         <div class="top-nav">
-          <ul>
+          <ul class="clearfix">
             <li v-for="(item,index) in nav" :key='index'>
               <router-link to="/shopping-mall">{{item}}</router-link>
             </li>
@@ -30,7 +30,6 @@
         </div>
       </div>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 

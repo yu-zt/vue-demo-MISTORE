@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-
-    <Header />
+    <!-- 首页默认显示的是shopping-mall -->
+    <!-- 所有的link都在index.html这里显示 -->
+    <router-view></router-view>
 
   </div>
 
@@ -9,19 +10,11 @@
 
 
 <script>
-import Header from './components/Header.vue'
-import HomeSwiper from './components/HomeSwiper.vue'
-import SiteHeader from './components/Site-header.vue'
-import HomeSub from './components/HomeSub.vue'
-import HomeMain from './components/HomeMain.vue'
+
 export default {
   name: 'App',
   components: {
-    HomeSwiper,
-    Header,
-    SiteHeader,
-    HomeSub,
-    HomeMain
+
   },
 
 }

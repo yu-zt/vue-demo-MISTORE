@@ -1,12 +1,13 @@
 <template>
   <div class="home-swiper-wrapper">
     <div class="home-swiper">
-      <a href="#" class="swiper-wrapper" v-for="item in swiperWrapperUrl" :key="item.id">
+      <router-link href="#" class="swiper-wrapper" v-for="item in swiperWrapperUrl" :key="item.id"
+                   :to="`/buy?id=${item.id}`">
         <transition :appear=true name="swiperWrapper">
           <img :src='item.url' v-show="item.flag" :id='item.id' @mouseenter="enter"
                @mouseleave="leave">
         </transition>
-      </a>
+      </router-link>
       <button class="prev" @click.passive="prev"></button>
       <button class="next" @click="next"></button>
       <div class="circle">
