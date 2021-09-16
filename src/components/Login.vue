@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <!-- <h1>hehe</h1> -->
 
     <div class="layout-side"></div>
@@ -43,6 +43,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@media screen and (max-width: 750px) {
+  .layout-side {
+    display: none;
+  }
+  .layout .layout-content {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+}
 .layout-side {
   position: absolute;
 
